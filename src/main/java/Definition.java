@@ -8,6 +8,7 @@ public class Definition {
   public Definition(String userDefinition) {
     mDefinition = userDefinition;
     allDefinitions.add(this);
+    mId = allDefinitions.size();
   }
 
   public String getDefinition() {
@@ -20,5 +21,9 @@ public class Definition {
 
   public static void clear() {
     allDefinitions.clear();
+  }
+
+  public int getId() {
+    return mId;
   }
 }

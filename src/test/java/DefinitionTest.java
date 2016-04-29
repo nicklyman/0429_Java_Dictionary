@@ -2,10 +2,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class DefinitionTest {
-  // @After
-  // public void tearDown() {
-  //   Definition.clear();
-  // }
+  @After
+  public void tearDown() {
+    Definition.clear();
+  }
 
   @Test
   public void definition_instantiatesCorrectly_true() {
@@ -32,5 +32,11 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("An area designated for public recreation");
     Definition.clear();
     assertEquals(Definition.all().size(), 0);
+  }
+
+  @Test
+  public void getId_returnsUniqueIdForEachDefinition_1() {
+    Definition testDefinition = new Definition("An area designated for public recreation");
+    assertEquals(1, testDefinition.getId());
   }
 }

@@ -29,15 +29,15 @@ public class WordTest {
 
   @Test
   public void clear_emptiesArrayListOfWords_0() {
-    Word myWord = new Word("park");
+    Word testWord = new Word("park");
     Word.clear();
     assertEquals(Word.all().size(), 0);
   }
 
   @Test
   public void getId_returnsUniqueIdForEachWord_1() {
-    Word myWord = new Word("park");
-    assertEquals(1, myWord.getId());
+    Word testWord = new Word("park");
+    assertEquals(1, testWord.getId());
   }
 
   @Test
