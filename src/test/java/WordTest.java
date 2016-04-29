@@ -2,11 +2,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class WordTest {
-  // @After
-  // public void tearDown() {
-  //   Word.clear();
-  //   Definition.clear();
-  // }
+  @After
+  public void tearDown() {
+    Word.clear();
+  }
 
   @Test
   public void word_instantiatesCorrectly_true() {
@@ -33,5 +32,11 @@ public class WordTest {
     Word myWord = new Word("park");
     Word.clear();
     assertEquals(Word.all().size(), 0);
+  }
+
+  @Test
+  public void getId_returnsUniqueIdForEachWord_1() {
+    Word myWord = new Word("park");
+    assertEquals(1, myWord.getId());
   }
 }

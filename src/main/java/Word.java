@@ -22,4 +22,8 @@ public class Word {
   public static void clear() {
     allWords.clear();
   }
+
+  public int getId() {
+    return mId;
+  }
 }
