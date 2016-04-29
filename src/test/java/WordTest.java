@@ -5,6 +5,7 @@ public class WordTest {
   @After
   public void tearDown() {
     Word.clear();
+    Definition.clear();
   }
 
   @Test
@@ -50,5 +51,11 @@ public class WordTest {
   @Test
   public void find_returnsNullIfWordNotFound_null() {
     assertTrue(Word.find(9999) == null);
+  }
+
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyList_ArrayList() {
+    Word testWord = new Word("play");
+    assertEquals(0, testWord.getDefinitions().size());
   }
 }

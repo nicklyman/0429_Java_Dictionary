@@ -67,10 +67,10 @@ public class AppTest extends FluentTest {
     click("a", withText("An area designated for public recreation"));
     assertThat(pageSource()).contains("An area designated for public recreation");
   }
-  
-  // @Test
-  // public void definitionNotFoundMessageShown() {
-  //   goTo("http://localhost:4567/definitions/9999");
-  //   assertThat(pageSource()).contains("Definition not found");
-  // }
+
+  @Test
+  public void definitionNotFoundMessageShown() {
+    goTo("http://localhost:4567/definitions/9999");
+    assertThat(pageSource()).contains("Definition not found");
+  }
 }

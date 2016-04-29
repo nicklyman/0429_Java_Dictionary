@@ -4,11 +4,13 @@ public class Word {
   private String mWord;
   private static ArrayList<Word> allWords = new ArrayList<Word>();
   private int mId;
+  private ArrayList<Definition> mDefinitions;
 
   public Word(String userWord) {
     mWord = userWord;
     allWords.add(this);
     mId = allWords.size();
+    mDefinitions = new ArrayList<Definition>();
   }
 
   public String getWord() {
@@ -33,5 +35,9 @@ public class Word {
     } catch (IndexOutOfBoundsException exception) {
       return null;
     }
+  }
+
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
   }
 }
