@@ -39,4 +39,16 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("An area designated for public recreation");
     assertEquals(1, testDefinition.getId());
   }
+
+  @Test
+  public void find_returnsDefinitionWithAccurateId_testDefinitionTwo() {
+    Definition testDefinitionOne = new Definition("An area designated for public recreation");
+    Definition testDefinitionTwo = new Definition("The gear used in automatic transmissions when the vehicle is not being used");
+    assertEquals(Definition.find(testDefinitionTwo.getId()), testDefinitionTwo);
+  }
+
+  @Test
+  public void find_returnsNullIfDefinitionNotFound_null() {
+    assertTrue(Definition.find(9999) == null);
+  }
 }
