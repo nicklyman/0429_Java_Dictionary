@@ -1,3 +1,9 @@
 DefinitionTest BDD testing:
 
-1.
+1. Definition class, create a new instance of the Definition class, true.
+2. "an area designated for public recreation", enter a definition into the Definition class and get definition back, String "an area designated for public recreation".
+3. "an area designated for public recreation, the gear used in automatic transmissions when the vehicle is not being used", return all instances of definitions from Definition class, true.
+4. clear, empties all definitions from ArrayList, 0.
+5. getId, ID is created for each definition, 1.
+6. find, returns definition with appropriate ID, second definition.
+7. find, returns null if definition is not found for word, null.

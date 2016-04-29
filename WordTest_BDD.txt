@@ -1,5 +1,11 @@
 WordTest BDD testing:
 
 1. Word class, create a new instance of the Word class, true.
-2. "dog", enter a word into the Word class and get word back, "dog".
-3.
+2. "park", enter a word into the Word class and get word back, String "park".
+3. "park, trail", return all instances of words from Word class, true.
+4. clear, empties all words from ArrayList, 0.
+5. getId, ID is created for each word, 1.
+6. find, returns word with appropriate ID, second word.
+7. find, returns null if word is not found in dictionary, null.
+8. get definition, starts with empty array of definitions, ArrayList.
+9. add definition, adds definition to word, true.
