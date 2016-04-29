@@ -19,4 +19,12 @@ public class WordTest {
     Word testWord = new Word("park");
     assertEquals("park", testWord.getWord());
   }
+
+  @Test
+  public void all_returnsAllInstancesOfWords_ArrayList() {
+    Word testWordOne = new Word("park");
+    Word testWordTwo = new Word("trail");
+    assertTrue(Word.all().contains(testWordOne));
+    assertTrue(Word.all().contains(testWordTwo));
+  }
 }
