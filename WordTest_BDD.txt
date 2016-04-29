@@ -1,0 +1,5 @@
+WordTest BDD testing:
+
+1. Word class, create a new instance of the Word class, true.
+2. "dog", enter a word into the Word class and get word back, "dog".
+3.
