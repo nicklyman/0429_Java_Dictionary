@@ -36,15 +36,15 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Your definition has been added to the dictionary.");
   }
 
-  // @Test
-  // public void definitionIsDisplayedTest() {
-  //   goTo("http://localhost:4567/definitions/new");
-  //   fill("#addDefinition").with("An area designated for public recreation");
-  //   submit(".btn");
-  //   click("a", withText("View definitions"));
-  //   assertThat(pageSource()).contains("An area designated for public recreation");
-  // }
-  //
+  @Test
+  public void definitionIsDisplayedTest() {
+    goTo("http://localhost:4567/definitions/new");
+    fill("#addDefinition").with("An area designated for public recreation");
+    submit(".btn");
+    click("a", withText("View definitions"));
+    assertThat(pageSource()).contains("An area designated for public recreation");
+  }
+
   // @Test
   // public void multipleDefinitionsAreDisplayedTest() {
   //   goTo("http://localhost:4567/definitions/new");
