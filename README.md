@@ -1,4 +1,4 @@
-# _APP NAME_
+# _Dictionary_
 
 #### _A dictionary for users to enter words and definitions, April 29, 2016_
 
