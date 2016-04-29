@@ -45,29 +45,29 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("An area designated for public recreation");
   }
 
-  // @Test
-  // public void multipleDefinitionsAreDisplayedTest() {
-  //   goTo("http://localhost:4567/definitions/new");
-  //   fill("#addDefinition").with("An area designated for public recreation");
-  //   submit(".btn");
-  //   goTo("http://localhost:4567/definitions/new");
-  //   fill("#addDefinition").with("The gear used in automatic transmissions when the vehicle is not being used");
-  //   submit(".btn");
-  //   click("a", withText("View definitions"));
-  //   assertThat(pageSource()).contains("An area designated for public recreation");
-  //   assertThat(pageSource()).contains("The gear used in automatic transmissions when the vehicle is not being used");
-  // }
-  //
-  // @Test
-  // public void definitionShowPageDisplaysDescription() {
-  //   goTo("http://localhost:4567/definitions/new");
-  //   fill("#addDefinition").with("An area designated for public recreation");
-  //   submit(".btn");
-  //   click("a", withText("View definitions"));
-  //   click("a", withText("An area designated for public recreation"));
-  //   assertThat(pageSource()).contains("An area designated for public recreation");
-  // }
-  //
+  @Test
+  public void multipleDefinitionsAreDisplayedTest() {
+    goTo("http://localhost:4567/definitions/new");
+    fill("#addDefinition").with("An area designated for public recreation");
+    submit(".btn");
+    goTo("http://localhost:4567/definitions/new");
+    fill("#addDefinition").with("The gear used in automatic transmissions when the vehicle is not being used");
+    submit(".btn");
+    click("a", withText("View definitions"));
+    assertThat(pageSource()).contains("An area designated for public recreation");
+    assertThat(pageSource()).contains("The gear used in automatic transmissions when the vehicle is not being used");
+  }
+
+  @Test
+  public void definitionShowPageDisplaysDescription() {
+    goTo("http://localhost:4567/definitions/new");
+    fill("#addDefinition").with("An area designated for public recreation");
+    submit(".btn");
+    click("a", withText("View definitions"));
+    click("a", withText("An area designated for public recreation"));
+    assertThat(pageSource()).contains("An area designated for public recreation");
+  }
+  
   // @Test
   // public void definitionNotFoundMessageShown() {
   //   goTo("http://localhost:4567/definitions/9999");
