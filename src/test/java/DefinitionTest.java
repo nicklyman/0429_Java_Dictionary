@@ -12,4 +12,10 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("An area designated for public recreation");
     assertEquals(true, testDefinition instanceof Definition);
   }
+
+  @Test
+  public void definition_instantiatesCorrectlyReturningDefinition_String() {
+    Definition testDefinition = new Definition("An area designated for public recreation");
+    assertEquals("An area designated for public recreation", testDefinition.getDefinition());
+  }
 }
