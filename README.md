@@ -17,7 +17,7 @@ _This app allows a user to enter words into a form and assign definitions to the
 * _Have Gradle installed on your computer_
 * _Use your command line to access the cloned repository on your computer_
 * _Type "gradle run" without quotation marks in the command line and it should build the application_
-* _Open a web browser window and type "localhost:4567" without quotation marks and it should open the game in your browser window_
+* _Open a web browser window and type "localhost:4567" without quotation marks and it should open the application in your browser window_
 
 ## Known Bugs
 
