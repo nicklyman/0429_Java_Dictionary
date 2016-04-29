@@ -18,4 +18,12 @@ public class DefinitionTest {
     Definition testDefinition = new Definition("An area designated for public recreation");
     assertEquals("An area designated for public recreation", testDefinition.getDefinition());
   }
+
+  @Test
+  public void all_returnsAllInstancesOfDefinitions_true() {
+    Definition testDefinitionOne = new Definition("An area designated for public recreation");
+    Definition testDefinitionTwo = new Definition("The gear used in automatic transmissions when the vehicle is not being used");
+    assertTrue(Definition.all().contains(testDefinitionOne));
+    assertTrue(Definition.all().contains(testDefinitionTwo));
+  }
 }
