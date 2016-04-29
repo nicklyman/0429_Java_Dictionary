@@ -40,4 +40,8 @@ public class Word {
   public ArrayList<Definition> getDefinitions() {
     return mDefinitions;
   }
+
+  public void addDefinition(Definition defintion) {
+    mDefinitions.add(defintion);
+  }
 }

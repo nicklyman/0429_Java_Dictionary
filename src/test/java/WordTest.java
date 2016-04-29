@@ -58,4 +58,12 @@ public class WordTest {
     Word testWord = new Word("play");
     assertEquals(0, testWord.getDefinitions().size());
   }
+
+  @Test
+  public void addDefinition_addsDefinitionToList_true() {
+    Word testWord = new Word("play");
+    Definition testDefinition = new Definition("A show that features actors and actresses performing on a stage");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
 }
