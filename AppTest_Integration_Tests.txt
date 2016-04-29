@@ -1,0 +1,12 @@
+AppTest Integration testing:
+
+1. Confirm the root path is going to the correct page.
+2. Able to add a word.
+3. Able to display a word.
+4. Able to display multiple words.
+5. When word is clicked, able to show 1 or mor definitions.
+  ** Requires ArrayLists to be linked**
+6. User able to add a word into a form.
+7. User added word is added to list of words.
+8. User able to add one or more defitions to word in a form.
+9. When user added word is clicked, their definitions are visible.
