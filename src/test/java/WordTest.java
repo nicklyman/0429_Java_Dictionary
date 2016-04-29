@@ -27,4 +27,11 @@ public class WordTest {
     assertTrue(Word.all().contains(testWordOne));
     assertTrue(Word.all().contains(testWordTwo));
   }
+
+  @Test
+  public void clear_emptiesArrayListOfWords_0() {
+    Word myWord = new Word("park");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
 }
