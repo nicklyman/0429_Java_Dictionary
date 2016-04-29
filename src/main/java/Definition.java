@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Definition {
   private String mDefinition;
   private static ArrayList<Definition> allDefinitions = new ArrayList<Definition>();
+  private int mId;
 
   public Definition(String userDefinition) {
     mDefinition = userDefinition;
@@ -15,5 +16,9 @@ public class Definition {
 
   public static ArrayList<Definition> all() {
     return allDefinitions;
+  }
+
+  public static void clear() {
+    allDefinitions.clear();
   }
 }

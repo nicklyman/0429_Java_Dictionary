@@ -26,4 +26,11 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(testDefinitionOne));
     assertTrue(Definition.all().contains(testDefinitionTwo));
   }
+
+  @Test
+  public void clear_emptiesArrayListOfDefinitions_0() {
+    Definition testDefinition = new Definition("An area designated for public recreation");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
 }
