@@ -20,7 +20,7 @@ public class WordTest {
   }
 
   @Test
-  public void all_returnsAllInstancesOfWords_ArrayList() {
+  public void all_returnsAllInstancesOfWords_true() {
     Word testWordOne = new Word("park");
     Word testWordTwo = new Word("trail");
     assertTrue(Word.all().contains(testWordOne));
@@ -38,5 +38,12 @@ public class WordTest {
   public void getId_returnsUniqueIdForEachWord_1() {
     Word myWord = new Word("park");
     assertEquals(1, myWord.getId());
+  }
+
+  @Test
+  public void find_returnsWordWithAccurateId_testWordTwo() {
+    Word testWordOne = new Word("park");
+    Word testWordTwo = new Word("trail");
+    assertEquals(Word.find(testWordTwo.getId()), testWordTwo);
   }
 }
