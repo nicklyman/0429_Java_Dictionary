@@ -49,16 +49,42 @@ public class AppTest extends FluentTest {
   @Test
   public void wordShowPageDisplaysWord() {
     goTo("http://localhost:4567/words/new");
-    fill("#addWord").with("trail");
+    fill("#addWord").with("lake");
     submit(".btn");
     click("a", withText("View words"));
-    click("a", withText("trail"));
-    assertThat(pageSource()).contains("trail");
+    click("a", withText("lake"));
+    assertThat(pageSource()).contains("lake");
+  }
+
+  @Test
+  public void wordDefinitionsFormIsDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#addWord").with("park");
+    submit(".btn");
+    click("a", withText("View words"));
+    click("a", withText("park"));
+    click("a", withText("Add a new definition"));
+    assertThat(pageSource()).contains("Add a definition to the word park");
+  }
+
+  @Test
+  public void definitionsIsAddedAndDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#addWord").with("park");
+    submit(".btn");
+    click("a", withText("View words"));
+    click("a", withText("park"));
+    click("a", withText("Add a new definition"));
+    fill("#addDefinition").with("An area designated for public recreation");
+    submit(".btn");
+    click("a", withText("View words"));
+    click("a", withText("park"));
+    assertThat(pageSource()).contains("An area designated for public recreation");
   }
 
   // @Test
-  // public void definitionNotFoundMessageShown() {
-  //   goTo("http://localhost:4567/definitions/9999");
-  //   assertThat(pageSource()).contains("Definition not found");
+  // public void wordNotFoundMessageShown() {
+  //   goTo("http://localhost:4567/words/9999");
+  //   assertThat(pageSource()).contains("Word not found");
   // }
 }
