@@ -81,10 +81,4 @@ public class AppTest extends FluentTest {
     click("a", withText("park"));
     assertThat(pageSource()).contains("An area designated for public recreation");
   }
-
-  // @Test
-  // public void wordNotFoundMessageShown() {
-  //   goTo("http://localhost:4567/words/9999");
-  //   assertThat(pageSource()).contains("Word not found");
-  // }
 }
