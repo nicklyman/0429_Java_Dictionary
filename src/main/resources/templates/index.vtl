@@ -1,3 +1,9 @@
 <h1>Your Dictionary</h1>
 
-<a href="/definitions/new">Add a new definition</a>
+<ul>
+  #foreach ($word in $words)
+    <li><a href="/words/$word.getId()">$word.getWord()</a></li>
+  #end
+</ul>
+
+<a href="/words/new">Add a new word</a>
