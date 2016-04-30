@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  font-family: monospace;
+  font-size: 20pt;
+  background-color: black;
+  color: red;
+}
+
+h1 {
+  font-size: 32pt;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
